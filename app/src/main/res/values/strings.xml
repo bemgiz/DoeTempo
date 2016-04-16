@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">DoeTempo</string>
+    <string name="action_settings">Settings</string>
+    <string name="Nome">Nome completo</string>
+    <string name="email">e-mail</string>
+    <string name="Senha">Senha</string>
+    <string name="DataNascimento">Data de nascimento</string>
+    <string name="Telefone">Telefone</string>
+    <string name="Endereco">Endereço</string>
+    <string name="Cidade">Cidade</string>
+    <string name="Domingo">Domingo</string>
+    <string name="Segunda">Segunda</string>
+    <string name="Terça">Terça</string>
+    <string name="Quarta">Quarta</string>
+    <string name="Quinta">Quinta</string>
+    <string name="Sexta">Sexta</string>
+    <string name="Sábado">Sábado</string>
+    <string name="manhã">manhã</string>
+    <string name="Tarde">tarde</string>
+    <string name="noite">noite</string>
+    <string name="SegundaTela">Avançar para a 2ª tela</string>
+    <string name="NovoUsuário">Novo usuário</string>
+    <string name="Login">Login</string>
+    <string name="ManterConectado">manter conectado</string>
+    <string name="CadastroDeVoluntário">Cadastro de Voluntário</string>
+    <string name="TxtCadastroDeVoluntário">Seja um voluntário e Doe seu Tempo para Abrigos de Animais, Casas de Repouso, Orfanatos, Hospitais, Albergues, Escolas para Excepcionais e Entidades de Assistência Social em geral</string>
+    <string name="CadastroDeEntidade">Cadastro de Entidade</string>
+    <string name="txtCadastroDeEntidade">Cadastre sua Entidade Social para receber ajuda de Voluntários</string>
+    <string name="IdadeMinima">Idade mínima</string>
+    <string name="IdadeMaxima">Idade máxima</string>
+    <string name="Responsável">Responsável</string>
+    <string name="Benefícios">Benefícios (alimentação,transporte,...)</string>
+    <string name="DescriçãoAtividade">Descrição da atividade</string>
+    <string name="NomeUsuario">Nome de Usuário do sistema</string>
+    <string name="NomeUsuario2">Nome de Usuário</string>
+</resources>
