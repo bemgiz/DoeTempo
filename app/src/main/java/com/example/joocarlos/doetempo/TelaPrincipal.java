@@ -145,6 +145,7 @@ public class TelaPrincipal extends AppCompatActivity {
         SharedPreferences.Editor editor = SharedPreferences.edit();
         editor.putString("userName", userName.getText().toString());
         editor.putString("password", userPassword.getText().toString());
+        //
         if (userManterConectado.isChecked()){
             editor.putBoolean("ManterConectado", true);
         }
