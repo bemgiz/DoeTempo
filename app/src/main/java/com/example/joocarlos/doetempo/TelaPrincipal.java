@@ -30,7 +30,7 @@ public class TelaPrincipal extends AppCompatActivity {
 
 
     // variaveis usadas na gravaçao de SharedPreferenc ( .ini )
-    EditText userEmail;
+    EditText userName;
     EditText userPassword;
     CheckBox userManterConectado;
 
@@ -83,7 +83,7 @@ public class TelaPrincipal extends AppCompatActivity {
                                 &&pass.equals(dataSnapshot.child("usuarios").child(nameusr).child("senha").getValue())) {
 
                             // grava login do Usuário se estiver marcado para gravar
-                            //saveIni(findViewById(R.id.bt_Gravar));
+                            saveIni();
 
                             Toast.makeText(getApplicationContext(), "Usuário Logado : " + dataSnapshot.child("usuarios").child(nameusr).child("nomeusuario").getValue() +
                                                                     "  -  Tipo Usr : " + dataSnapshot.child("usuarios").child(nameusr).child("tipousuario").getValue(),
@@ -104,9 +104,8 @@ public class TelaPrincipal extends AppCompatActivity {
             }
         });
 
-
         // variaveis usadas na gravaçao de SharedPreferenc ( .ini )
-        userEmail = (EditText) findViewById(R.id.ed_Email);
+        userName = (EditText) findViewById(R.id.ed_NomeUsuario);
         userPassword = (EditText) findViewById(R.id.ed_Password);
         userManterConectado = (CheckBox) findViewById(R.id.cb_ManterConectado);
 
@@ -141,10 +140,10 @@ public class TelaPrincipal extends AppCompatActivity {
     }
 
     // grava dados de Sharedpreferences( .ini )
-    public void saveIni( View view) {
+    public void saveIni() {
         SharedPreferences SharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = SharedPreferences.edit();
-        editor.putString("email", userEmail.getText().toString());
+        editor.putString("userName", userName.getText().toString());
         editor.putString("password", userPassword.getText().toString());
         if (userManterConectado.isChecked()){
             editor.putBoolean("ManterConectado", true);
@@ -158,14 +157,14 @@ public class TelaPrincipal extends AppCompatActivity {
     // carrega dados de Sharedpreferences( .ini )
     public void loadIni() {
         SharedPreferences SharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
-        String usrEmail = SharedPreferences.getString("email", "");
+        String usrName = SharedPreferences.getString("userName", "");
         String usrPassword = SharedPreferences.getString("password", "");
         Boolean usrConectado = SharedPreferences.getBoolean("ManterConectado", false);
         //
         //
         // Se está marcado para ManterConectado, carrega dados salvos
         if (usrConectado == true) {
-            userEmail.setText(usrEmail);
+            userName.setText(usrName);
             userPassword.setText(usrPassword);
             userManterConectado.setChecked(true);
         }
